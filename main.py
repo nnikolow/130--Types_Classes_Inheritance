@@ -1,6 +1,7 @@
 from typing import TypedDict
 import spoonacular as sp
 
+# API key
 api = sp.API("7e8a32c703094062a6f7e0160fea0387")
 
 
@@ -36,15 +37,3 @@ def get_nutrition_from_spoonacular(recipe_name: str) -> RecipeNutritionInformati
 recipe_check = get_nutrition_from_spoonacular(
     input("What's the name of the recipe you want to get the nutritional information of?" + '\n'))
 print(recipe_check)
-
-# spaghetti = get_nutrition_from_spoonacular("Spaghetti Aglio et Olio")
-# print(spaghetti)
-
-# Parse an ingredient
-# response = api.visualize_recipe_nutrition("pasta", 2)
-# data = response.json()
-# print(data)
-#
-# response = api.get_a_random_food_joke()
-# data = response.json()
-# print(data['text'])
